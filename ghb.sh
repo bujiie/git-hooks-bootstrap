@@ -25,6 +25,7 @@ for file in $git_hook_location/$context/*; do
         mv $hook_path "$hook_path.$now.bak"
     fi
 	ln -sf $file $this_dir/.git/hooks/
+	chmod +x $hook_path
 done
 
 
